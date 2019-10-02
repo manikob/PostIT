@@ -1,0 +1,3 @@
+<div class="main-content" *ngIf="notes">
+    <app-single-note *ngFor="let postIt of notes" [postItNote]="postIt"></app-single-note>
+</div>
