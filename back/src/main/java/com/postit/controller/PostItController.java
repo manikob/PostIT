@@ -52,10 +52,10 @@ public class PostItController {
     @PutMapping
     public PostItDto update(@RequestBody PostItDto note, HttpServletResponse response) {
         log.info("Start updating note: {}", note != null ? note.getId() : null);
-
+        
         PostItDto result = null;
         if (note != null && note.getId() != null) {
-            result = this.service.update(note);
+            result = this.service.update(note); 
         }
         if (result == null) {
             response.setStatus(HttpServletResponse.SC_NO_CONTENT);
