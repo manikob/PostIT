@@ -12,12 +12,12 @@
   }
 }
 
-textarea {
+textarea,
+.free-text {
   font-family: "Rock Salt", cursive;
   margin-left: 20%;
   margin-top: 15%;
   width: 60%;
-
   overflow: hidden;
   -ms-overflow-style: none;
 
@@ -25,9 +25,23 @@ textarea {
   background: none;
   border: none;
   outline: 0;
+}
 
-  &:not(.single-note-view) {
-    cursor: pointer;
-    font-size: xx-small;
+textarea {
+  height: 100px;
+
+  @media (min-width: 500px) {
+    height: 280px;
   }
+
+  @media (min-width: 700px) {
+    height: 380px;
+  }
+}
+
+.free-text {
+  cursor: pointer;
+  font-size: xx-small;
+  white-space: pre-wrap;
+  height: 200px;
 }

@@ -1,0 +1,14 @@
+### NetBeans ###
+/back/nbproject/private/
+/back/nbbuild/
+/back/dist/
+/back/nbdist/
+/back/.nb-gradle/
+/back/build/
+/back/target/
+
+### VS Code ###
+/front/.vscode/
+/front/node_modules
+/front/.editorconfig
+/front/dist

@@ -10,6 +10,9 @@ app-single-note {
 }
 
 .buttons-bar {
+  position: fixed;
+  top: 10px;
+  right: 50px;
   width: 100%;
   display: flex;
   justify-content: flex-end;

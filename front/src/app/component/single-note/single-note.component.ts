@@ -26,7 +26,8 @@ export class SingleNoteComponent extends BaseComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  @HostListener('click') onDoubleClick() {
+  @HostListener('click') 
+  onClick() {
     if (!this.singleNoteView) {
       this.router.navigateByUrl(`/${this.postItNote.id}`);
     }

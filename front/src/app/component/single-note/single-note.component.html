@@ -1,5 +1,17 @@
 <div class="main-content">
-    <textarea [(ngModel)]="postItNote.content" (ngModelChange)="onEditing.next(true);" rows="10" maxlength="200"
-        [disabled]="!singleNoteView" [class.single-note-view]="singleNoteView">
-    </textarea>
+    <ng-container *ngIf="singleNoteView; else freeText">
+        <ng-container *ngTemplateOutlet="textarea"></ng-container>
+    </ng-container>
+
 </div>
+
+<ng-template #textarea>
+    <textarea [(ngModel)]="postItNote.content" (ngModelChange)="onEditing.next(true);" rows="10" maxlength="200">
+    </textarea>
+</ng-template>
+
+<ng-template #freeText>
+    <div class="free-text">
+        {{postItNote?.content}}
+    </div>
+</ng-template>
