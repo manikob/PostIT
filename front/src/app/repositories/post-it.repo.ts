@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
+
 import { PostItDto } from '../dto/postit.interface';
 import { api } from '../util/api';
 import { Paged } from '../dto/paged.type';
@@ -22,5 +23,17 @@ export class PostItRepo {
             .set('sort', 'id,asc');
 
         return this.http.get<Paged<PostItRepo>>(api.postIt.getAll, { observe: 'response', params: params })
+    }
+
+    public get(id: number) {
+        return this.http.get<PostItDto>(api.postIt.get.replace('{id}', `${id}`), { observe: 'response' });
+    }
+
+    public delete(id: number) {
+        return this.http.delete(api.postIt.delete.replace('{id}', `${id}`), { observe: 'response' });
+    }
+
+    public save(dto: PostItDto) {
+        return this.http.put<PostItDto>(api.postIt.update, dto, { observe: 'response' });
     }
 }

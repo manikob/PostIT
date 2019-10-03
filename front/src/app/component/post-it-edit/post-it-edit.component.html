@@ -1,1 +1,11 @@
-<p>post-it-edit works!</p>
+<ng-container *ngIf="postItNote">
+    <div class="main-content">
+        <app-single-note [singleNoteView]="true" [postItNote]="postItNote" (onEditing)="isModified = true;" @slide>
+        </app-single-note>
+    </div>
+    <div class="buttons-bar">
+        <button [disabled]="!isModified" (click)="onSave()">Save</button>
+        <button [routerLink]="['/']">Cancel</button>
+        <button (click)="onDelete()">Delete</button>
+    </div>
+</ng-container>

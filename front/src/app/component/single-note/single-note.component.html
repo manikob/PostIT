@@ -1,1 +1,5 @@
-{{postItNote?.content}}
+<div class="main-content">
+    <textarea [(ngModel)]="postItNote.content" (ngModelChange)="onEditing.next(true);" rows="10" maxlength="200"
+        [disabled]="!singleNoteView" [class.single-note-view]="singleNoteView">
+    </textarea>
+</div>
