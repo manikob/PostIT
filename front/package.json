@@ -6,10 +6,11 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "prod": "ng serve --prod --proxy-config ./proxy.conf.json --host 0.0.0.0",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "dev": "ng serve --proxy-config ./proxy-dev.conf.json --host 0.0.0.0"
+    "dev": "ng serve --proxy-config ./proxy.conf.json --host 0.0.0.0"
   },
   "private": true,
   "dependencies": {

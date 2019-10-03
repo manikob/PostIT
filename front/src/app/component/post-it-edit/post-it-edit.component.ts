@@ -20,6 +20,7 @@ import { BaseComponent } from '../base.component';
 })
 export class PostItEditComponent extends BaseComponent implements OnInit {
   postItNote: PostItDto;
+  isModified: boolean;
 
   constructor(
     private service: PostItService,
