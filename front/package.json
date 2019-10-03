@@ -1,6 +1,6 @@
 {
   "name": "postit-note-app",
-  "description": "PostID Notest Application",
+  "description": "PostID Notes Application",
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
