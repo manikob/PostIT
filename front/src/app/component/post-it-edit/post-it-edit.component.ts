@@ -4,10 +4,10 @@ import { trigger, transition, useAnimation } from '@angular/animations';
 
 import { tap, takeUntil } from 'rxjs/operators';
 
-import { PostItDto } from 'src/app/dto/postit.interface';
 import { PostItService } from 'src/app/services/post-it.service';
 import { fadeIn } from 'src/app/util/animations';
 import { BaseComponent } from '../base.component';
+import { PostItDto } from 'src/app/dto/dto';
 
 @Component({
   selector: 'app-post-it-edit',

@@ -1,8 +1,8 @@
 import { Component, Input, HostListener, HostBinding, OnInit, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { PostItDto } from 'src/app/dto/postit.interface';
 import { BaseComponent } from '../base.component';
+import { PostItDto } from 'src/app/dto/dto';
 
 @Component({
   selector: 'app-single-note',

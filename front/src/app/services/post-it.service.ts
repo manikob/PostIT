@@ -4,7 +4,7 @@ import { tap, map } from 'rxjs/operators';
 
 import { PostItRepo } from '../repositories/post-it.repo';
 import { HttpStatus } from '../util/http-status.enum';
-import { PostItDto } from '../dto/postit.interface';
+import { PostItDto } from '../dto/dto';
 
 @Injectable({ providedIn: 'root' })
 export class PostItService {

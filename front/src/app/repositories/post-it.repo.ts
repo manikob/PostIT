@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 
-import { PostItDto } from '../dto/postit.interface';
 import { api } from '../util/api';
 import { Paged } from '../dto/paged.type';
+import { PostItDto } from '../dto/dto';
 
 @Injectable({ providedIn: 'root' })
 export class PostItRepo {
