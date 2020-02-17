@@ -3,10 +3,22 @@
   flex-wrap: wrap;
 }
 
-app-single-note {
-  margin: 30px;
-  width: 300px;
-  height: 300px;
+.single-note {
+  width: 250px;
+  height: 250px;
+  margin: 20px;
+
+
+  &:nth-child(3n) {
+    transform:rotate(4deg);
+  }
+
+  &:nth-child(2n) {
+    transform:rotate(-3deg);
+  }
+  &:nth-child(5n) {
+    transform:rotate(-13deg);
+  }
 }
 
 .buttons-bar {

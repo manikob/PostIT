@@ -1,33 +1,30 @@
-:host {
+
+.single-note {
+  //width: calc(100% - 100px);
+  //height: calc(100% - 100px);
+
+  width: 250px;
+  height: 250px;
+
+  //padding: 20px;
+  //overflow: hidden;
+  margin: auto;
+
+  // @media (min-width: 500px) {
+  //   width: 400px;
+  //   height: 300px;
+  // }
+
+  // @media (min-width: 700px) {
+  //   width: 540px;
+  //   height: 500px;
+  // }
+}
+
+.buttons-bar {
   position: absolute;
-  width: calc(100% - 50px);
-  height: calc(100% - 50px);
-  margin: 10px;
-  overflow: hidden;
-
-  app-single-note {
-    width: 300px;
-    height: 300px;
-
-    @media (min-width: 500px) {
-      width: 400px;
-      height: 400px;
-    }
-
-    @media (min-width: 700px) {
-      width: 540px;
-      height: 520px;
-    }
-
-    display: block;
-    margin: auto;
-  }
-
-  .buttons-bar {
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-  }
+  bottom: 10px;
+  width: calc(100% - 30px);
+  display: flex;
+  justify-content: flex-end;
 }

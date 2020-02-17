@@ -2,5 +2,7 @@
     <button (click)="onAdd()">Create New...</button>
 </div>
 <div class="main-content" *ngIf="notes" [@listAnimation]="notes.length">
-    <app-single-note *ngFor="let postIt of notes" [postItNote]="postIt"></app-single-note>
+    <div class="single-note" *ngFor="let postIt of notes; let i of index;">
+        <app-single-note [postItNote]="postIt"></app-single-note>
+    </div>
 </div>

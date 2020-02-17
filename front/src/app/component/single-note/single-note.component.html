@@ -1,17 +1,4 @@
-<div class="main-content">
-    <ng-container *ngIf="singleNoteView; else freeText">
-        <ng-container *ngTemplateOutlet="textarea"></ng-container>
-    </ng-container>
-
-</div>
-
-<ng-template #textarea>
-    <textarea [(ngModel)]="postItNote.content" (ngModelChange)="onEditing.next(true);" rows="10" maxlength="200">
-    </textarea>
-</ng-template>
-
-<ng-template #freeText>
-    <div class="free-text">
-        {{postItNote?.content}}
+<div [class.main-view1]="even" [class.main-view2]="!even" class="main-view">
+    <div class="free-text" contenteditable (input)="onEdit($event.srcElement)" [textContent]="internalVal">
     </div>
-</ng-template>
+</div>

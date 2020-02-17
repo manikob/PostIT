@@ -1,6 +1,6 @@
 <ng-container *ngIf="postItNote">
-    <div class="main-content">
-        <app-single-note [singleNoteView]="true" [postItNote]="postItNote" (onEditing)="isModified = true;" @slide>
+    <div class="single-note" @slide>
+        <app-single-note [singleNoteView]="true" [postItNote]="postItNote" (onEditing)="isModified = true;">
         </app-single-note>
     </div>
     <div class="buttons-bar">

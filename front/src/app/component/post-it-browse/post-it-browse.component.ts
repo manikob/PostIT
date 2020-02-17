@@ -43,14 +43,13 @@ export class PostItBrowseComponent extends BaseComponent implements OnInit {
 
   onAdd() {
     this.service.create()
-    .pipe(takeUntil(this.destroy$))
-    .subscribe(resp => {
-      if (!resp) {
-        alert("Ups. Something went wrong!");
-      } else {
-        this.router.navigateByUrl(`/${resp.id}`);
-      }
-    });
+      .pipe(takeUntil(this.destroy$))
+      .subscribe(resp => {
+        if (!resp) {
+          alert("Ups. Something went wrong!");
+        } else {
+          this.router.navigateByUrl(`/${resp.id}`);
+        }
+      });
   }
-
 }

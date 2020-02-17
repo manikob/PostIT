@@ -2,17 +2,39 @@
   min-width: 100px;
   min-height: 100px;
 
-  background-image: url("/assets/img/sticky-note.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-
   &:not(.single-note-view) {
     cursor: pointer;
   }
 }
 
-textarea,
+.main-view {
+  width: 100%;
+  height: 100%;
+  background: rgb(250, 250, 163);
+}
+
+.main-view::after {
+  content: "";
+  position: relative;
+  display: block;
+  width: 67%;
+  height: 20%;
+  bottom: 8%;
+  z-index: -1;
+}
+
+.main-view1::after {
+  transform: skew(8deg, 10deg);
+  box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.4);
+  left: 20%;
+}
+
+.main-view2::after {
+  transform: skew(-10deg, -8deg);
+  box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.4);
+  left: 12%;
+}
+
 .free-text {
   font-family: "Rock Salt", cursive;
   margin-left: 20%;
@@ -25,18 +47,6 @@ textarea,
   background: none;
   border: none;
   outline: 0;
-}
-
-textarea {
-  height: 210px;
-
-  @media (min-width: 500px) {
-    height: 280px;
-  }
-
-  @media (min-width: 700px) {
-    height: 380px;
-  }
 }
 
 .free-text {
